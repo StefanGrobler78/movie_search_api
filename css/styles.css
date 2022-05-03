@@ -1,0 +1,303 @@
+*{
+    box-sizing: border-box;
+}
+:root {
+/************** Colors **************/
+    --bgc-primary: 0, 0%, 11%;
+    --bgc-secondary: 0, 0%, 96%;
+    
+    --border-clr: 216, 12%, 84%;
+
+    --fc-top: 0, 0%, 96%;
+    --fc-search: 220, 9%, 46%;
+    --fc-searchText: 217, 19%, 27%;
+    --fc-body: 218, 11%, 65%;
+    --fc-icon: 0, 3%, 87%;
+    --fc-heading: 221, 39%, 11%;
+/************** Fonts **************/
+    --ff-primary: 'Inter', sans-serif;
+
+    --fs-small: 12px;
+    --fs-normal: 14px;
+    --fs-medium: 18px;
+    --fs-large: 42.79px;
+
+    --fw-normal: 400;
+    --fw-medium: 500;
+    --fw-bold: 600;
+    --fw-bolder: 700;
+    --fw-black: 800;
+    
+}
+html, body {
+    margin: 0;
+    padding: 0;
+}
+h1, 
+h2, 
+h3,
+h4, 
+p {
+    margin: 0;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+img{
+    display: block;
+    width: 100%;
+}
+body{
+    background-color: hsl(var(--bgc-primary));
+    font-family: var(--ff-primary);
+    color: hsl(var(--fc-body));
+}
+/************** Layout **************/
+.container {
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 2rem;
+    width: 550px;
+    left: 687px;
+    top: 92px;
+    background: hsl(var(--bgc-secondary));
+    /* border: 2px solid red; */
+}
+/************** TOP CONTAINER **************/
+.top_container {
+    display: flex;
+    justify-content: space-evenly;
+    align-self: flex-start;
+    width: 100%;
+    height: 200px;
+    background:
+    linear-gradient(
+        rgba(0, 0, 0, 0.5), 
+        rgba(0, 0, 0, 0.5)
+      ),
+        url("https://images.unsplash.com/photo-1563381013529-1c922c80ac8d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=813&q=80");
+    background-position: 0% 23%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+/************** TOP TEXT **************/
+.topText_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 462px;
+}
+.topText_container h1{
+    font-size: var(--fs-large);
+    font-weight: var(--fw-black);
+    color: hsl(var(--fc-top));
+}
+.topText_container a{
+    font-size: var(--fs-normal);
+    font-weight: var(--fw-bolder);
+    line-height: 20px;
+    color: hsl(var(--fc-top));
+}
+/************** SEARCH BAR **************/
+.search_container{
+    margin: -20px;
+    background-color: hsl(var(--bgc-secondary));
+    border-radius: 6px;
+    width: 462px;
+    display: grid;
+    height: 38px;
+    grid-template-columns: 41px 301px 120px;
+    border: 1px solid hsl(var(--border-clr));
+    align-items: center;
+}
+.search_container input {
+    border: none;
+    outline: none;
+    height: 36px;
+    padding-left: 1rem;
+}
+.search_container input:focus {
+    background-color: hsl(var(--border-clr));
+}
+.fa-search {
+    text-align: center;
+    align-self: center;
+}
+.btn_search {
+    border: none;
+    border-radius:  0 .5rem .5rem 0;
+    border-left: 1px solid hsl(var(--border-clr));
+    height: 36px;
+    width: 118px;
+    font-weight: var(--fw-medium);
+    font-size: var(--fs-normal);
+    line-height: 20px;
+    letter-spacing: 1px;
+}
+/************** MAIN CONTAINER **************/
+.main_container {
+  width: 550px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+  padding-top: 3rem;
+}
+/************** FILM CONTAINER **************/
+.film_container {
+    width: 550px;
+    height: 579px;
+    display:grid;
+    padding-top: 6rem;
+    justify-content: center;
+    text-align: center;
+}
+.fa-film {
+    font-size: 5rem;
+    color: var(--fc-icon);
+}
+/************** MOVIE CONTAINER **************/
+.movie_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 462px;
+    gap: 1rem;
+}
+.result_container {
+    display: grid;
+    justify-content: center;
+    height: 579px;
+    padding: 2rem;
+    text-align: center;
+}
+/************** FILM CARD **************/
+.film_card {
+   display: flex;
+   justify-content: space-between;
+   align-items: flex-start;
+   min-width: 100%;
+}
+.card_img {
+    width: 100px;
+    align-self: center;
+    justify-self: center;
+}
+.card_img img{
+    width: 100px;
+    box-shadow: 0 2px 3px hsla(0, 0%, 0%, 0.5);
+}
+.card_body {
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    min-width: 342px;
+}
+.film_card_title {
+    display: flex;
+    color: black;
+    margin: .5rem 0;
+    align-items: center;
+}
+.rating {
+    margin-left: 1rem;
+    font-size: var(--fs-small);
+}
+.film_card_desc{
+    margin-bottom: .5rem;
+    text-align: justify;
+    font-weight: var(--fw-normal);
+    line-height: 20px;
+}
+.film_card_detail {
+    display: flex;
+    justify-content:flex-start;
+    align-items:center;
+    width: 100%;
+    font-size: var(--fs-normal);
+    color: hsl(var(--fc-heading));
+    margin-bottom: .5rem;
+    gap: 1rem;
+}
+.film_card_detail a{
+    color: hsl(var(--fc-heading));
+    margin-left: .2rem;
+}
+.film_card_detail a:hover{
+    text-decoration: underline;
+}
+hr{
+    border: 1.5px solid hsl(var(--border-clr));
+    width: 462px;
+    margin: 2rem auto;
+}
+
+/************** WATCHLIST **************/
+.watchlist_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 462px;
+    gap: 1rem;
+}
+.watch_container{
+    padding-top: 4rem;
+    display: grid;
+    justify-content: center;
+    height: 579px;
+    text-align: center;
+}
+.watch_span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.watch_container h2{
+    margin-bottom: .5rem;
+}
+.watch_container a{
+    color: hsl(var(--fc-heading));
+    margin-left: .3rem;
+}
+.watch_container a:hover{
+    text-decoration: underline;
+}
+.watchlist_heading {
+    padding: 1rem 0 3rem;
+}
+.btn {
+    background-color: hsl(var(--bgc-primary));
+    color: hsl(var(--fc-top));
+    width: 16px;
+    height: 16px;
+    border-radius: 0%;
+    font-size: 8px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+}
+.remove_container{
+    display:flex;
+}
+.delete_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.delete_btn a{
+    margin-left: .3rem;
+}
+.delete_btn a:hover{
+    text-decoration: underline;
+}
